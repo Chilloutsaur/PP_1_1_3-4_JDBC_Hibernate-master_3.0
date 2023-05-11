@@ -2,6 +2,9 @@ package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.service.UserServiceImpl;
+import jm.task.core.jdbc.util.Util;
+
+import java.sql.SQLException;
 
 
 public class Main {
@@ -15,5 +18,6 @@ public class Main {
         System.out.print(user.getAllUsers());
         user.cleanUsersTable();
         user.dropUsersTable();
+
     }
 }
