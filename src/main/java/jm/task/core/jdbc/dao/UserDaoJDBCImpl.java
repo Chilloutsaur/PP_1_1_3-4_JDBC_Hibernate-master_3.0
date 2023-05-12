@@ -12,7 +12,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     }
 
-   static private final Connection connection = Util.getConnection();
+   static private final  Connection connection = Util.getConnection();
 
     public void createUsersTable() {
         try (Statement statement = connection.createStatement()) {
@@ -37,8 +37,7 @@ public class UserDaoJDBCImpl implements UserDao {
     static private final String INSERT_NEW = "INSERT INTO users (name, lastName, age) VALUES (?,?,?)";
 
     public void saveUser(String name, String lastName, byte age) {
-        try (Connection connection = Util.getConnection();
-             PreparedStatement preState = connection.prepareStatement(INSERT_NEW)) {
+        try (PreparedStatement preState = connection.prepareStatement(INSERT_NEW)) {
             preState.setString(1, name);
             preState.setString(2, lastName);
             preState.setInt(3, age);

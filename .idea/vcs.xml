@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PP_1_1_3-4_JDBC_Hibernate-master" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Users" vcs="Git" />
   </component>
 </project>
