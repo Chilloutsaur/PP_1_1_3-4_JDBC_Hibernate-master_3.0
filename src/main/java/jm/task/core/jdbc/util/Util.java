@@ -19,6 +19,10 @@ public class Util {
 
     private static SessionFactory sessionFactory;
 
+    // зачем-то close
+    public static void SessionFactoryClose() {
+        sessionFactory.close();
+    }
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
